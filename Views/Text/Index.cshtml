@@ -1,0 +1,22 @@
+﻿@*@model MyMVCApplication.Models.TextModel*@
+@model List<MyMVCApplication.Models.TextModel>
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+}
+
+<html>
+<head>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.development.js"></script>
+    @Styles.Render("~/Content/ReactStyle.css")
+    @Scripts.Render("~/bundles/react")
+</head>
+    <body>
+        <div id="reactContainer"></div>
+        <script>ReactDOM.render(React.createElement(App, null), document.getElementById("reactContainer"))</script>
+    </body>
+</html>
+
+
